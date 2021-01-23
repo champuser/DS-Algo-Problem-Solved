@@ -53,6 +53,44 @@ public class LinkedList {
     }
 
 
+    void deleteFirst(int num){
+        Node tempNode = head;
+        while (tempNode!= null && tempNode.data != num){
+            tempNode = tempNode.next;
+
+
+        }
+        if(tempNode == head){
+            if(head == null){
+                System.out.println("List is Empty");
+                return;
+            }
+            head = head.next;
+        }
+    }
+
+     void delete_Mid_Last(int num){
+        Node currentNode = head;
+        Node prevNode = null;
+        while(currentNode!= null && currentNode.data!=num){
+            prevNode = currentNode;
+            currentNode = currentNode.next;
+
+        }
+        if(currentNode == head){
+            if(head == null){
+                System.out.println("List is Empty");
+                return;
+            }
+            head = head.next;
+            return;
+        }
+        prevNode.next =  currentNode.next;
+     }
+
+
+
+
     // Printing the list
 
     void printList(){

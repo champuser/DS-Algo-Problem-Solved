@@ -12,7 +12,12 @@ public class Main {
         // for insert a node  at the end we have to go to last node
         list.insertAtMid(2,4);    // here num is for which we have to insert an element after that
 
-     list.printList();
+//        list.printList();
+//          list.deleteFirst(1);
+//          list.printList();
+
+        list.delete_Mid_Last(3);
+        list.printList();
 
     }
 }

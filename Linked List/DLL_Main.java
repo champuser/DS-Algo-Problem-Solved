@@ -14,6 +14,12 @@ public class DllMain {
         dll.insertAtEnd(8);
         dll.printList();
 
+        dll.insertInBetween(5,10);
+        dll.printList();
+        dll.delete(8);
+        dll.printList();
+
+
 
     }
 }

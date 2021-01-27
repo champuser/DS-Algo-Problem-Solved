@@ -18,6 +18,8 @@ public class Main {
 
         list.delete_Mid_Last(3);
         list.printList();
+	list.reverse();
+	list.printList();
 
     }
 }

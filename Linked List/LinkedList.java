@@ -1,7 +1,3 @@
-
-Inserting an element at begining,mid & end of a Linked List & print the list
-
-
 package com.linkedlistds;
 class Node{
     int data;
@@ -16,6 +12,20 @@ class Node{
 
 public class LinkedList {
     Node head = null;
+
+    // reverse singly Linked List
+
+    void  reverse(){
+        Node current = head,next = null, prev = null;
+        while(current!= null){
+            next = current.next; // storing the next to not loose the reference of list
+            current.next = prev;
+            prev = current;
+            current = next;
+
+        }
+        head = prev;
+    }
     void insertAtBeg(int data){
         Node newNode = new Node(data);      // creating new  Node object
         newNode.next = head;       // next of newNode pointing to head
@@ -87,6 +97,11 @@ public class LinkedList {
         }
         prevNode.next =  currentNode.next;
      }
+
+
+
+
+
 
 
 
